@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Uncut Label - My Chai, My Co-Pilot.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a202c 0%, #0a0e14 100%); /* Dark futuristic gradient */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #e2e8f0; /* Light gray text for contrast */
+        }
+        .container-glow {
+            box-shadow: 0 0 30px rgba(74, 222, 128, 0.4), 0 0 60px rgba(251, 191, 36, 0.3); /* Green and yellow glow */
+            animation: pulse 4s infinite alternate;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(74, 222, 128, 0.3), 0 0 40px rgba(251, 191, 36, 0.2);
+            }
+            100% {
+                transform: scale(1.02);
+                box-shadow: 0 0 40px rgba(74, 222, 128, 0.5), 0 0 80px rgba(251, 191, 36, 0.4);
+            }
+        }
+        .price-strike {
+            position: relative;
+            display: inline-block;
+        }
+        .price-strike::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ef4444; /* Red for strike-through */
+            transform: translateY(-50%) rotate(-5deg); /* Slight angle for cool effect */
+        }
+    </style>
+</head>
+<body class="p-4">
+
+    <main class="max-w-6xl mx-auto bg-gray-900 bg-opacity-80 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl container-glow transition-all duration-300 ease-in-out">
+        <header class="text-center mb-12">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-green-500 mb-4 tracking-tight">
+                The Uncut Label
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 font-medium">Unleash Your Style. Uncut.</p>
+        </header>
+
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <!-- T-Shirt Image - Front -->
+            <div class="flex flex-col items-center p-6 bg-gray-800 rounded-2xl shadow-xl transition-transform transform hover:scale-105 duration-300">
+                <h2 class="text-3xl font-bold text-white mb-6 text-center">"My Chai, My Co-Pilot."</h2>
+                <img src="uploaded:2.png-268b6e1b-ee55-40f9-a705-ab0a5d174757" alt="Front of My Chai, My Co-Pilot T-shirt" class="w-full max-w-md rounded-xl object-cover border-4 border-teal-500/50">
+                <p class="text-lg text-gray-400 mt-4">The ultimate blend of comfort and daily motivation.</p>
+            </div>
+
+            <!-- T-Shirt Image - Back (Logo) -->
+            <div class="flex flex-col items-center p-6 bg-gray-800 rounded-2xl shadow-xl transition-transform transform hover:scale-105 duration-300">
+                <h2 class="text-3xl font-bold text-white mb-6 text-center">The Uncut Label - Back Design</h2>
+                <img src="uploaded:3.jpg-351b1a5d-1049-4982-9a10-042dd345d127" alt="Back of T-shirt with The Uncut Label logo" class="w-full max-w-md rounded-xl object-cover border-4 border-yellow-500/50">
+                <p class="text-lg text-gray-400 mt-4">Authenticity, stitched into every fiber.</p>
+            </div>
+        </section>
+
+        <section class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Exclusive Launch Offer!</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10">
+                <p class="text-3xl md:text-4xl text-gray-500 font-semibold price-strike">
+                    ₹2500
+                </p>
+                <p class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500 animate-bounce">
+                    ₹1700
+                </p>
+            </div>
+            <p class="text-xl md:text-2xl text-gray-400 mt-4 font-medium">Limited time offer. Grab yours before it's gone!</p>
+        </section>
+
+        <section class="text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Ready to Elevate Your Style?</h2>
+            <a href="https://wa.me/9175333223?text=Hello!%20I'm%20interested%20in%20ordering%20the%20'My%20Chai,%20My%20Co-Pilot.'%20T-shirt%20for%20%E2%82%B91700.%20Please%20guide%20me%20on%20how%20to%20proceed."
+               target="_blank"
+               class="inline-flex items-center justify-center px-8 py-4 text-2xl font-bold text-white bg-gradient-to-r from-green-500 to-teal-600 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-green-300 focus:ring-opacity-75 relative overflow-hidden">
+                <span class="relative z-10">Order Now!</span>
+                <span class="absolute inset-0 bg-white opacity-10 blur-xl animate-ping-slow"></span>
+            </a>
+            <p class="text-md text-gray-500 mt-4">Click to order directly via WhatsApp. </p>
+        </section>
+    </main>
+
+    <footer class="mt-16 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 The Uncut Label. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple JavaScript for any future interactive elements, if needed.
+        // For now, the design is primarily CSS-driven.
+        // Remember to replace '91XXXXXXXXXX' with your actual WhatsApp number in the 'Order Now' button link.
+    </script>
+</body>
+</html>
